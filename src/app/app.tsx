@@ -18,9 +18,11 @@ class App extends React.Component<State, Props>
 	{
 		return (
 			<Router>
-				<Switch>
-					{ createRoutes(routes) }
-				</Switch>
+				<>
+					<Switch>
+						{ createRoutes(routes) }
+					</Switch>
+				</>
 			</Router>
 		);
 	}

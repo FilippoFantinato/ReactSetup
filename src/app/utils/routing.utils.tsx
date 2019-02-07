@@ -16,7 +16,7 @@ export function createRoutes(routes: RouteType[]): React.ReactNode[]
 			}
 			else if(el.redirect)
 			{
-				rn = <Redirect path={el.path} to={el.redirect} />;
+				rn = <Redirect key={index} path={el.path} to={el.redirect} />;
 			}
 			else
 			{
