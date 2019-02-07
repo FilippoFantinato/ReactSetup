@@ -1,0 +1,21 @@
+@mixin SizeGenerator($key, $body, $interval: 1, $from: 1, $to: 30)
+{
+    @for $i from $from through $to
+    {
+        $tmp: $i * $interval;
+        .#{$key}-#{$tmp} 
+        {
+            #{body}: $tmp + 'px';
+        }
+    }
+}
+
+@mixin MapElaborator($map, $prefix, $body)
+{
+	@each $key, $value in $map
+	{
+		.BG-#{$key} {
+			background-color: $value;
+		}
+	}
+}
