@@ -1,8 +1,10 @@
 import logger from 'redux-logger'
 import { createStore, applyMiddleware } from 'redux';
-import { State, reducer } from './reducers';
-import { Action } from './actions'
 
-const store = createStore<State, Action, any, any>(reducer, applyMiddleware(logger));
+import reducer, { initialState } from './reducers';
+import Action from '../types/actions';
+import GState from '../types/state';
 
-export default store
+const store = createStore<GState, Action, any, any>(reducer, initialState, applyMiddleware(logger));
+
+export default store;

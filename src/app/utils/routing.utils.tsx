@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Route, Redirect } from "react-router-dom";
 
-import { Route as RouteType } from '../types/config.types';
+import { Route as RouteType } from '../types/system/config.types';
 
 export function createRoutes(routes: RouteType[]): React.ReactNode[]
 {

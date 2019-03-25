@@ -1,3 +1,10 @@
+export interface Paginator
+{
+	offset: number,
+	limit: number,
+	pages: number
+}
+
 export interface InfinityScroll
 {
 	offset: number,

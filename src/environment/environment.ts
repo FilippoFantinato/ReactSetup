@@ -1,4 +1,4 @@
-import { IEnvironment } from '../app/types/config.types';
+import { IEnvironment } from '../app/types/system/config.types';
 
 class Environment implements IEnvironment
 {
