@@ -1,11 +1,9 @@
-import { CounterAction } from './components/counter.types';
-
 export interface GeneralAction<T>
 {
 	type: string,
 	payload: T
 }
 
-type Action = CounterAction;
+type Action = any; // Any is only to avoid errors
 
 export default Action;

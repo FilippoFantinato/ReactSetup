@@ -1,6 +1,6 @@
-export type TypeBody = string | FormData | Blob | ArrayBuffer | DataView;
+export type BodyType = string | FormData | Blob | ArrayBuffer | DataView;
 
-export enum EnumMethod
+export enum MethodEnum
 {
 	GET 	= 'GET',
 	POST 	= 'POST',
@@ -8,64 +8,60 @@ export enum EnumMethod
 	DELETE 	= 'DELETE'
 }
 
-export interface EnumMode
+export interface HttpServiceOptions extends RequestInit
 {
-	NoCors: 'no-cors', 
-	Cors: 'cors',
-	SameOrigin: 'same-origin'
+	params?: any;
 }
 
-export interface EnumCache
-{
-	 Default: 'default', 
-	 NoCache: 'no-cache', 
-	 Reload: 'reload',
-	 ForceCache: 'force-cache',
-	 OnlyIfCached: 'only-if-cached'
-}
+// export interface EnumMode
+// {
+// 	NoCors: 'no-cors', 
+// 	Cors: 'cors',
+// 	SameOrigin: 'same-origin'
+// }
 
-export interface EnumCredentials
-{
-	Include: 'include',
-	SameOrigin: 'same-origin',
-	Omit: 'omit'
-}
+// export interface EnumCache
+// {
+// 	 Default: 'default', 
+// 	 NoCache: 'no-cache', 
+// 	 Reload: 'reload',
+// 	 ForceCache: 'force-cache',
+// 	 OnlyIfCached: 'only-if-cached'
+// }
 
-export interface EnumRedirect
-{
-	Manula: 'manual',
-	Follow: 'follow',
-	Error: 'error'
-}
+// export interface EnumCredentials
+// {
+// 	Include: 'include',
+// 	SameOrigin: 'same-origin',
+// 	Omit: 'omit'
+// }
 
-export interface EnumReferrer
-{
-	NoReferrer: 'no-referrer',
-	Client: 'client'
-}
+// export interface EnumRedirect
+// {
+// 	Manula: 'manual',
+// 	Follow: 'follow',
+// 	Error: 'error'
+// }
 
-export interface HttpOptions
-{
-	method: EnumMethod,
-	mode?: EnumMode,
-	cache?: EnumCache,
-	credentials?: EnumCredentials,  
-	headers?: HttpHeaders | Headers,
-	redirect?: EnumRedirect,
-	referrer?: EnumReferrer,
-	body: TypeBody
-}
+// export interface EnumReferrer
+// {
+// 	NoReferrer: 'no-referrer',
+// 	Client: 'client'
+// }
 
-export interface HttpHeaders
-{
+// export interface HttpOptions
+// {
+// 	method: MethodEnum,
+// 	mode?: EnumMode,
+// 	cache?: EnumCache,
+// 	credentials?: EnumCredentials,  
+// 	headers?: HttpHeaders | Headers,
+// 	redirect?: EnumRedirect,
+// 	referrer?: EnumReferrer,
+// 	body: BodyType
+// }
+
+// export interface HttpHeaders
+// {
 	
-}
-
-export interface IHttpService
-{
-	call: 	(url: String, options: HttpOptions) => Promise<String>,
-	get: 	(url: String, options: HttpOptions) => Promise<String>,
-	post: 	(url: String, options: HttpOptions) => Promise<String>,
-	put: 	(url: String, options: HttpOptions) => Promise<String>,
-	delete: (url: String, options: HttpOptions) => Promise<String>
-}
+// }

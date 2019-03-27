@@ -3,11 +3,20 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 import routes from './app.routing';
 import { createRoutes } from './utils/routing.utils';
-import { State, Props } from './types/app.types';
 
 import './app.scss';
 
-class App extends React.Component<State, Props>
+export interface Props
+{
+
+}
+
+export interface State
+{
+	
+}
+
+class App extends React.Component<Props, State>
 {
 	constructor(props: Props)
 	{
