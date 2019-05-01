@@ -1,10 +1,10 @@
 export interface IEnvironment
 {
-    port?: number | undefined;
-    host: string;
-    protocol: string;
+    port?: string | undefined;
+    host?: string | undefined;
+    protocol?: string | undefined;
     
-    toString : (endpoint: string) => string;
+    getServer : (endpoint: string) => string;
 }
 
 export interface Route
@@ -12,5 +12,7 @@ export interface Route
 	path?: string,
 	component?: React.ReactNode,
 	redirect?: string,
-	exact?: boolean
+	exact?: boolean,
+	props?: any,
+	fallback?: React.ReactNode
 }

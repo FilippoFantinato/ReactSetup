@@ -2,7 +2,7 @@ import { HttpServiceOptions, MethodEnum, BodyType } from '../types/system/HttpSe
 
 class IHTTPService
 {
-	static composeURL(endpoint: string, params?: any): RequestInfo
+	/*static composeURL(endpoint: string, params?: any): RequestInfo
 	{
 		var url: URL = new URL(endpoint); 
 
@@ -44,5 +44,5 @@ class IHTTPService
 					body,
 					...options
 				}).then((res: Response) => res.json().then((data) => data as T));
-	}
+	}*/
 }

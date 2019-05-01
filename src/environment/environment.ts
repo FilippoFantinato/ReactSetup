@@ -2,13 +2,20 @@ import { IEnvironment } from '../app/types/system/config.types';
 
 class Environment implements IEnvironment
 {
-	port = parseInt(process.env.API_PORT!);
-    host = process.env.API_HOST as string;
-    protocol = process.env.API_PROTOCOL as string;
+	port = process.env.SERVER_PORT;
+    host = process.env.SERVER_HOST;
+    protocol = process.env.SERVER_PROTOCOL;
 
-	toString(endpoint: string): string
+	getServer(endpoint?: string): string
 	{
-        return this.protocol + "://" + this.host + (this.port ? ":" + this.port: "") + endpoint;
+		var port = this.port ? ":" + this.port : ""; 
+
+		if(!endpoint)
+		{
+			endpoint = "";
+		}
+
+        return this.protocol + "://" + this.host + port + endpoint;
 	}
 }
 
