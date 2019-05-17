@@ -91,13 +91,13 @@ The main parts of it are:
 
 ### Environment
 Environment is the directory which contains all the file usefull for the management of variables taken from the .env file
-- environment.ts 
+- **environment.ts** 
 
 
 ### App
 The app directory contains all
 
-- *app.tsx*. It's the main React Component and here there is the first integration with React Router. All the information about the routing are into the file app.routing.tsx
-- *app.routing.ts*. Here all the routes of the app.tsx component are declareted.There will be an object called "routes", which is of type Route[], that contains which path associate to a specific component.<br/>
+- **app.tsx**. It's the main React Component and here there is the first integration with React Router. All the information about the routing are into the file app.routing.tsx
+- **app.routing.ts**. Here all the routes of the app.tsx component are declareted.There will be an object called "routes", which is of type Route[], that contains which path associate to a specific component.<br/>
 All the route can easly created by the function [createRoutes]() contained in the file [utils/routing.utils.tsx]()
-- app.scss. It's the main style file in the project. All the others files will be included here.
+- **app.scss**. It's the main style file in the project. All the others files will be included here.
