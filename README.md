@@ -1,7 +1,7 @@
 # ReactSetup
 
 - [Introduction](#introduction)
-- [Structure]()
+- [Structure](#structure)
 
 <h2 id='introduction'>Introduction</h2>
 ReactSetup is my personal setup for react projects
@@ -19,17 +19,17 @@ It include:
 - [x] [React Router v4](https://reacttraining.com/react-router/)
 - [x] [DotEnv for Webpack](https://github.com/mrsteele/dotenv-webpack)
 - [x] [SASS/SCSS with node-sass](https://sass-lang.com/)
+- [x] React Router Lazy Loading
 - [ ] [Webpack Code Splitting](https://webpack.js.org/guides/code-splitting/)
 - [ ] [Webpack Tree Shaking in production](https://webpack.js.org/guides/tree-shaking/)
-- [ ] React Router Lazy Loading
 
-Should I include: 
+Should I include:
 - [Redux Thunk](https://github.com/reduxjs/redux-thunk)?
 - [Redux Saga](https://redux-saga.js.org/)?
 - [Webpack Caching](https://webpack.js.org/guides/caching/)
 - Separeted environment system?
 
-## Structure
+<h2 id='structure'>Structure</h2>
 
 ```bash
 ├── public
